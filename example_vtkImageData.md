@@ -1,7 +1,7 @@
-Following code is modified from "5.2.4. Reading binary 2D image" of "https://docs.paraview.org/en/latest/ReferenceManual/pythonProgrammableFilter.html".
+Following code is modified from "5.2.4. Reading binary 2D image" of "https://docs.paraview.org/en/latest/ReferenceManual/pythonProgrammableFilter.html#reading-binary-2d-image".
 
 The code is for Sources->Programmable source.
-Ensure that the `Output Data` Set Type is set to `vtkImageData`.
+Ensure that the `Output Data Set Type` is set to `vtkImageData`.
 
 ```python
 # Code for 'Script'
@@ -18,7 +18,6 @@ output.SetExtent(0, dims[0]-1, 0, dims[1]-1, 0, dims[2]-1)
 output.PointData.append(data, "scalars")
 output.PointData.SetActiveScalars("scalars")
 ```
-
 
 ```python
 # Code for 'RequestInformation Script'.
